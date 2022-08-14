@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#$#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:blaze_powder"
+    },
+    "$": {
+      "item": "tutorialmod:amethyst"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:firestone"
+  }
+}

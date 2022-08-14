@@ -1,6 +1,7 @@
 package com.professorqu.tutorialmod.block;
 
 import com.professorqu.tutorialmod.TutorialMod;
+import com.professorqu.tutorialmod.block.custom.FirestoneBlock;
 import com.professorqu.tutorialmod.item.ModItemGroup;
 import com.professorqu.tutorialmod.item.ModItems;
 import net.minecraft.block.AbstractBlock;
@@ -25,8 +26,12 @@ public class ModBlocks {
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)));
 
     public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)));
+            () -> new Block(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(8f)));
+
+    public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
+            () -> new FirestoneBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

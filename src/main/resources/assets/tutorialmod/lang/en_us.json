@@ -1,9 +1,15 @@
 {
   "item.tutorialmod.amethyst": "Amethyst",
+  "item.tutorialmod.firestone": "Firestone",
+
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",
-  "item.tutorialmod.firestone": "Firestone",
+
   "block.tutorialmod.firestone_block": "Firestone Block",
 
-  "itemGroup.tutorialModTab": "Tutorial Mod"
+  "itemGroup.tutorialModTab": "Tutorial Mod",
+
+  "tooltip.tutorialmod.firestone": "Hold §eSHIFT§r or §eSHIFT + ALT§r for more information!",
+  "tooltip.tutorialmod.firestone_shift": "Might set you on fire. But also might protect from it!",
+  "tooltip.tutorialmod.firestone_shift_alt": "If used on §5Obsidian§r: you light on fire, or you gain fire resistance.\nIf used on §8anything else§r: you light on fire, or the ground lights on fire."
 }

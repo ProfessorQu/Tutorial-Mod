@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " # ",
     "#$#",
-    " # "
+    "$#$",
+    "#$#"
   ],
   "key": {
     "#": {
-      "item": "minecraft:blaze_powder"
+      "item": "minecraft:stone"
     },
     "$": {
-      "item": "tutorialmod:amethyst"
+      "tag": "forge:gems/amethyst"
     }
   },
   "result": {
-    "item": "tutorialmod:firestone"
+    "item": "tutorialmod:amethyst_ore"
   }
 }

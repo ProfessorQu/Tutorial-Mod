@@ -11,6 +11,12 @@
   "block.tutorialmod.amethyst_button": "Amethyst Button",
   "block.tutorialmod.amethyst_pressure_plate": "Amethyst Pressure Plate",
 
+  "item.tutorialmod.amethyst_sword": "Amethyst Sword",
+  "item.tutorialmod.amethyst_shovel": "Amethyst Shovel",
+  "item.tutorialmod.amethyst_axe": "Amethyst Axe",
+  "item.tutorialmod.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.tutorialmod.amethyst_hoe": "Amethyst Hoe",
+
   "block.tutorialmod.firestone_block": "Firestone Block",
 
   "itemGroup.tutorialModTab": "Tutorial Mod",

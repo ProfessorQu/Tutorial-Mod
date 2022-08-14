@@ -4,8 +4,7 @@ import com.professorqu.tutorialmod.TutorialMod;
 import com.professorqu.tutorialmod.block.custom.FirestoneBlock;
 import com.professorqu.tutorialmod.item.ModItemGroup;
 import com.professorqu.tutorialmod.item.ModItems;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -32,6 +31,33 @@ public class ModBlocks {
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
             () -> new FirestoneBlock(AbstractBlock.Properties.create(Material.IRON)
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
+
+    public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("amethyst_stairs",
+            () -> new StairsBlock(() -> AMETHYST_BLOCK.get().getDefaultState(),
+                    AbstractBlock.Properties.create(Material.IRON)
+                            .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
+
+    public static final RegistryObject<Block> AMETHYST_FENCE = registerBlock("amethyst_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
+
+    public static final RegistryObject<Block> AMETHYST_FENCE_GATE = registerBlock("amethyst_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
+
+    public static final RegistryObject<Block> AMETHYST_SLAB = registerBlock("amethyst_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
+
+    public static final RegistryObject<Block> AMETHYST_BUTTON = registerBlock("amethyst_button",
+            () -> new StoneButtonBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)
+                    .doesNotBlockMovement()));
+
+    public static final RegistryObject<Block> AMETHYST_PRESSURE_PLATE = registerBlock("amethyst_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    AbstractBlock.Properties.create(Material.IRON)
+                            .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

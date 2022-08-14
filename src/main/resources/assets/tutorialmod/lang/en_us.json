@@ -4,6 +4,12 @@
 
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",
+  "block.tutorialmod.amethyst_stairs": "Amethyst Stairs",
+  "block.tutorialmod.amethyst_fence": "Amethyst Fence",
+  "block.tutorialmod.amethyst_fence_gate": "Amethyst Fence Gate",
+  "block.tutorialmod.amethyst_slab": "Amethyst Slab",
+  "block.tutorialmod.amethyst_button": "Amethyst Button",
+  "block.tutorialmod.amethyst_pressure_plate": "Amethyst Pressure Plate",
 
   "block.tutorialmod.firestone_block": "Firestone Block",
 

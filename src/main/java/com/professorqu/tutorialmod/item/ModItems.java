@@ -1,6 +1,7 @@
 package com.professorqu.tutorialmod.item;
 
 import com.professorqu.tutorialmod.TutorialMod;
+import com.professorqu.tutorialmod.block.ModBlocks;
 import com.professorqu.tutorialmod.item.custom.Firestone;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -55,6 +56,11 @@ public class ModItems {
     public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
             () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
                     new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
+
+    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
+            () -> new BlockItem(ModBlocks.OATS.get(),
+                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)
+                            .food(new Food.Builder().hunger(1).saturation(0.1f).fastToEat().build())));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

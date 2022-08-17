@@ -2,6 +2,7 @@ package com.professorqu.tutorialmod.block;
 
 import com.professorqu.tutorialmod.TutorialMod;
 import com.professorqu.tutorialmod.block.custom.FirestoneBlock;
+import com.professorqu.tutorialmod.block.custom.OatsBlock;
 import com.professorqu.tutorialmod.item.ModItemGroup;
 import com.professorqu.tutorialmod.item.ModItems;
 import net.minecraft.block.*;
@@ -58,6 +59,32 @@ public class ModBlocks {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
                     AbstractBlock.Properties.create(Material.IRON)
                             .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f)));
+
+    public static final RegistryObject<Block> AMETHYST_DOOR = registerBlock("amethyst_door",
+            () -> new DoorBlock(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2)
+                    .harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f).notSolid()));
+
+    public static final RegistryObject<Block> AMETHYST_TRAPDOOR = registerBlock("amethyst_trapdoor",
+            () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2)
+                    .harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(6f).notSolid()));
+
+    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop",
+            () -> new OatsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> REDWOOD_LOG = registerBlock("redwood_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> REDWOOD_WOOD = registerBlock("redwood_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = registerBlock("stripped_redwood_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
+            () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

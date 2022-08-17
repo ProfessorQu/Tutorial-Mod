@@ -3,10 +3,12 @@ package com.professorqu.tutorialmod.block;
 import com.professorqu.tutorialmod.TutorialMod;
 import com.professorqu.tutorialmod.block.custom.FirestoneBlock;
 import com.professorqu.tutorialmod.block.custom.OatsBlock;
+import com.professorqu.tutorialmod.block.custom.trees.RedwoodTree;
 import com.professorqu.tutorialmod.item.ModItemGroup;
 import com.professorqu.tutorialmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
@@ -85,6 +87,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
             () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> REDWOOD_LEAVES = registerBlock("redwood_leaves",
+            () -> new LeavesBlock(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f)
+                    .tickRandomly().sound(SoundType.PLANT).notSolid()));
+
+    public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
+            () -> new SaplingBlock(new RedwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
